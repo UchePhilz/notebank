@@ -5,6 +5,7 @@
  */
 package com.notebank.models;
 
+import com.notebank.models.dto.UserDto;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -16,8 +17,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
+
 import lombok.*;
 
 /**
@@ -49,12 +50,12 @@ public class Users implements Serializable {
     @NotNull
     @Size(min = 1, max = 300)
     @Column(name = "password", nullable = false)
-    private int password;
+    private String password;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 500)
     @Column(name = "access_token", nullable = false, length = 500)
-    private Integer accessToken;
+    private String accessToken;
     @Basic(optional = true)
     @Column(name = "ts")
     @Temporal(TemporalType.TIMESTAMP)
@@ -63,5 +64,12 @@ public class Users implements Serializable {
     public Users(Integer id) {
         this.id = id;
     }
+
+    public Users(String fullname, String email, String password) {
+        this.fullname = fullname;
+        this.email = email;
+        this.password = password;
+    }
+
 
 }

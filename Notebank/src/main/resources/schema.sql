@@ -1,0 +1,22 @@
+
+DROP TABLE IF EXISTS notes;
+CREATE TABLE `notes` (
+	`id` INT AUTO_INCREMENT PRIMARY KEY,
+	`title` VARCHAR(50) NOT NULL,
+	`body` VARCHAR(10000) NOT NULL,
+	`tag` VARCHAR(200) NOT NULL,
+        `visibility` ENUM('PUBLIC','PRIVATE') NOT NULL,
+        `create_time` TIMESTAMP not null
+	`ts` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+        id INT AUTO_INCREMENT  PRIMARY KEY,
+	fullname CHAR(50) NOT NULL ,
+        email CHAR(50) NOT NULL ,
+	password varchar(300) NOT NULL,
+        access_token varchar(500) not null,
+        ts TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+CREATE INDEX email_uniq ON users (email);

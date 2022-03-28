@@ -22,6 +22,6 @@ public interface UsersRepository extends CrudRepository<Users, Integer> {
 
     public Optional<Users> findByEmail(String email);
 
-    public Users findByAccessToken(String accesssToken);
+    public Optional<Users> findByAccessToken(String accesssToken);
 
 }

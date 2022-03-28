@@ -22,7 +22,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 /**
+ * The UsersService class will contain all business logic for the user module
  *
+ * Methods that returns ResponseEntity<?> will be used to satisfy http requests
  * @author Uche Powers
  */
 @Service
@@ -34,28 +36,34 @@ public class UsersService {
     public UsersService() {
     }
 
+    //this is done for the benefit of testing and it is ne
     public UsersService(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
 
+    
     public ResponseEntity<?> register(UserDto userDto) {
 
         ResponseEntity<?> httpResponse = null;
 
+        //perfumes validation checks 
         List<ValidatorMessage> validate = ValidatorMessage.validate(userDto);
-
         if (validate.isEmpty()) {
+            
+            //check that no one is using the the email of that is to be saved
             Optional<Users> findByEmail = usersRepository.findByEmail(userDto.getEmail());
-
             if (!findByEmail.isPresent()) {
 
+                //return user entity from user dto
                 Users users = userDto.returnUser();
+                //encode password
                 users.setPassword(PasswordEncoder.encoder(userDto.getPassword()));
+                //generate accesstoken for login
                 users.setAccessToken(TokenGenerator.generalToken());
 
                 usersRepository.save(users);
-                userDto.setPassword(null);
-                httpResponse = new ResponseObject(HttpStatus.OK, userDto).HttpResponse();
+                users.setPassword(null);
+                httpResponse = new ResponseObject(HttpStatus.OK, users).HttpResponse();
 
             } else {
                 httpResponse = new ResponseObject(HttpStatus.ALREADY_REPORTED,
@@ -64,7 +72,7 @@ public class UsersService {
         } else {
             httpResponse = new ResponseObject(HttpStatus.BAD_REQUEST, validate).HttpResponse();
         }
-        System.out.println("Output: " + httpResponse.getStatusCode().name());
+        
         return httpResponse;
     }
 
@@ -75,12 +83,15 @@ public class UsersService {
         List<ValidatorMessage> validate = ValidatorMessage.validate(loginDto);
 
         if (validate.isEmpty()) {
+            
+            //check if email exist
             Optional<Users> findByEmail = usersRepository.findByEmail(loginDto.getEmail());
-
             if (findByEmail.isPresent()) {
+                
                 Users user = findByEmail.get();
+                
+                //check to see if password matches
                 boolean checkPassword = PasswordEncoder.checkPassword(loginDto.getPassword(), findByEmail.get().getPassword());
-
                 if (checkPassword) {
 
                     user.setAccessToken(TokenGenerator.generalToken());
@@ -102,6 +113,16 @@ public class UsersService {
             httpResponse = new ResponseObject(HttpStatus.BAD_REQUEST, validate).HttpResponse();
         }
         return httpResponse;
+    }
+
+    // validates access token of and returns the users id or null
+    //this method could cache the access token and id to improve performance
+    public Integer validateUser(String accessToken) {
+
+        Optional<Users> findByAccessToken = usersRepository.findByAccessToken(accessToken);
+
+        return findByAccessToken.isPresent() ? findByAccessToken.get().getId() : null;
+
     }
 
 }

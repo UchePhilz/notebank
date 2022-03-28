@@ -5,7 +5,7 @@
  */
 package com.notebank.models;
 
-import com.notebank.models.enums.Visbility;
+import com.notebank.models.enums.NoteVisibility;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -61,7 +61,7 @@ public class Notes implements Serializable {
     @Column(name = "tag", nullable = false, length = 200)
     private String tag;
     @Column(name = "visibility")
-    private Visbility visibility;
+    private NoteVisibility visibility;
     @NotNull
     @Column(name = "user_id")
     private int userId;
@@ -78,4 +78,22 @@ public class Notes implements Serializable {
         this.id = id;
     }
 
+    public Notes(String title, String body, String tag, NoteVisibility visibility) {
+        this.title = title;
+        this.body = body;
+        this.tag = tag;
+        this.visibility = visibility;
+    }
+
+    public Notes(int id, String title, String body, String tag, NoteVisibility visibility, int userId) {
+        this.id = id;
+        this.title = title;
+        this.body = body;
+        this.tag = tag;
+        this.visibility = visibility;
+        this.userId = userId;
+    }
+
+    
+    
 }

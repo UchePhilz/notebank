@@ -17,6 +17,10 @@ public class ResponseObject {
     private Object obj;
     private HttpStatus httpStatus;
 
+    public ResponseObject(HttpStatus httpStatus) {
+        this.httpStatus = httpStatus;
+    }
+
     public ResponseObject(HttpStatus httpStatus, Object obj) {
         this.httpStatus = httpStatus;
         this.obj = obj;

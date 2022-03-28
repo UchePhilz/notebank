@@ -8,7 +8,7 @@ package com.notebank.models.enums;
  *
  * @author Uche Powers
  */
-public enum Visbility {
+public enum NoteVisibility {
     PUBLIC,
     PRIVATE
 }

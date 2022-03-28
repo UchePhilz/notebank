@@ -1,0 +1,5 @@
+<map id="com.notebank.repositories.NotesRepository.findByIdAndVisibility" name="com.notebank.repositories.NotesRepository.findByIdAndVisibility">
+<area shape="rect" id="node1" title=" " alt="" coords="467,5,707,47"/>
+<area shape="rect" id="node2" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a39ebc7787556484f4e98a05745e7eb0c" title=" " alt="" coords="225,5,419,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1notebank_1_1controllers_1_1_notes_controller.html#a0e7472b8ef6e7a8a3deb345b22f9d3c7" title=" " alt="" coords="5,5,177,47"/>
+</map>

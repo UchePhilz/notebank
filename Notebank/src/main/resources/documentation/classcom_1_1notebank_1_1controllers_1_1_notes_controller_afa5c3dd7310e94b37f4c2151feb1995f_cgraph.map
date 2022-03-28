@@ -1,0 +1,11 @@
+<map id="com.notebank.controllers.NotesController.updateNotes" name="com.notebank.controllers.NotesController.updateNotes">
+<area shape="rect" id="node1" title=" " alt="" coords="5,119,193,160"/>
+<area shape="rect" id="node2" href="$classcom_1_1notebank_1_1utils_1_1_response_object.html#a90f1be822bec4f606b34bcf5f521ef78" title=" " alt="" coords="504,5,699,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a470b1d737c5c93b75c874bebf08c021c" title=" " alt="" coords="241,119,435,160"/>
+<area shape="rect" id="node8" href="$classcom_1_1notebank_1_1services_1_1_users_service.html#abcdfcd2111bf5c94b5ac0478f311feed" title=" " alt="" coords="241,216,435,257"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1notebank_1_1repositories_1_1_notes_repository.html#a5857b5cec5695b35dd0dfaf59e46af37" title=" " alt="" coords="487,71,715,112"/>
+<area shape="rect" id="node5" href="$classcom_1_1notebank_1_1models_1_1dto_1_1_notes_dto.html#a3f21a85dfcf84dd2a19a3a1f7a660ff7" title=" " alt="" coords="513,136,689,177"/>
+<area shape="rect" id="node6" href="$classcom_1_1notebank_1_1utils_1_1_validator_message.html#af3197f995f7d1f41eaa53c83d8a725ab" title=" " alt="" coords="508,201,695,243"/>
+<area shape="rect" id="node7" href="$classcom_1_1notebank_1_1utils_1_1_validator_message.html#a2db1bfa45b17001b436fdfe09f070cb1" title=" " alt="" coords="768,201,955,243"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1notebank_1_1repositories_1_1_users_repository.html#a0c3c46a42e03d9e495d4d9d9f633f943" title=" " alt="" coords="483,267,720,308"/>
+</map>

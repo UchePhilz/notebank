@@ -1,0 +1,9 @@
+<map id="com.notebank.controllers.NotesController.deleteNote" name="com.notebank.controllers.NotesController.deleteNote">
+<area shape="rect" id="node1" title=" " alt="" coords="5,181,183,223"/>
+<area shape="rect" id="node2" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a524cf494679aceda23189dcadd60dc92" title=" " alt="" coords="231,93,424,135"/>
+<area shape="rect" id="node4" href="$classcom_1_1notebank_1_1utils_1_1_response_object.html#a90f1be822bec4f606b34bcf5f521ef78" title=" " alt="" coords="757,123,952,164"/>
+<area shape="rect" id="node6" href="$classcom_1_1notebank_1_1services_1_1_users_service.html#abcdfcd2111bf5c94b5ac0478f311feed" title=" " alt="" coords="231,240,424,281"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1notebank_1_1repositories_1_1_notes_repository.html#a5857b5cec5695b35dd0dfaf59e46af37" title=" " alt="" coords="477,5,705,47"/>
+<area shape="rect" id="node5" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#aeb08414d6072471475295f6c7a0d36dd" title=" " alt="" coords="477,123,704,164"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1notebank_1_1repositories_1_1_users_repository.html#a0c3c46a42e03d9e495d4d9d9f633f943" title=" " alt="" coords="472,240,709,281"/>
+</map>

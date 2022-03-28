@@ -1,0 +1,12 @@
+<map id="com.notebank.utils.NoteUtils.notEmpty" name="com.notebank.utils.NoteUtils.notEmpty">
+<area shape="rect" id="node1" title=" " alt="" coords="763,187,973,229"/>
+<area shape="rect" id="node2" href="$classcom_1_1notebank_1_1utils_1_1_note_utils.html#a3eee202e383f81a02ab0bc851fc19e90" title=" " alt="" coords="472,5,715,32"/>
+<area shape="rect" id="node3" href="$classcom_1_1notebank_1_1utils_1_1_pagination.html#ab49e6f54881351c3d04351a0fb8614c9" title=" " alt="" coords="484,57,703,98"/>
+<area shape="rect" id="node6" href="$classcom_1_1notebank_1_1utils_1_1_note_utils.html#afd345511c6f8190c1c21dd6d0456f5b3" title=" " alt="" coords="488,122,699,163"/>
+<area shape="rect" id="node7" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a014290420c5df3e80fceefbe7a23ecbd" title=" " alt="" coords="480,187,707,229"/>
+<area shape="rect" id="node8" href="$classcom_1_1notebank_1_1utils_1_1_note_utils.html#a81ac07e61a8f0fee0957f6b1d47529a2" title=" " alt="" coords="492,253,695,294"/>
+<area shape="rect" id="node9" href="$classcom_1_1notebank_1_1utils_1_1_note_utils.html#ab1d26a7ca1c7e45aca6816425621177f" title=" " alt="" coords="492,318,695,359"/>
+<area shape="rect" id="node10" href="$classcom_1_1notebank_1_1utils_1_1_note_utils.html#a2005a8c40f23c531ff87136ad0ebe522" title=" " alt="" coords="492,383,695,425"/>
+<area shape="rect" id="node4" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a73c0f06c1fb1942da2513d6f532208cd" title=" " alt="" coords="231,90,424,131"/>
+<area shape="rect" id="node5" href="$classcom_1_1notebank_1_1controllers_1_1_notes_controller.html#ae8fb76c512271511a13400e49947f9dd" title=" " alt="" coords="5,90,183,131"/>
+</map>

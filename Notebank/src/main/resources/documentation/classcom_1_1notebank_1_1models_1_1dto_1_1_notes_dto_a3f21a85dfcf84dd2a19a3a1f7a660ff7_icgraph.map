@@ -1,0 +1,7 @@
+<map id="com.notebank.models.dto.NotesDto.returnNotes" name="com.notebank.models.dto.NotesDto.returnNotes">
+<area shape="rect" id="node1" title=" " alt="" coords="483,39,659,80"/>
+<area shape="rect" id="node2" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#add83b1d6c6952171a7002e999e6fb5cb" title=" " alt="" coords="241,5,435,47"/>
+<area shape="rect" id="node4" href="$classcom_1_1notebank_1_1services_1_1_notes_service.html#a470b1d737c5c93b75c874bebf08c021c" title=" " alt="" coords="241,71,435,112"/>
+<area shape="rect" id="node3" href="$classcom_1_1notebank_1_1controllers_1_1_notes_controller.html#a077196b7c3d2f680a2ef0b4194df7635" title=" " alt="" coords="7,5,192,47"/>
+<area shape="rect" id="node5" href="$classcom_1_1notebank_1_1controllers_1_1_notes_controller.html#afa5c3dd7310e94b37f4c2151feb1995f" title=" " alt="" coords="5,71,193,112"/>
+</map>

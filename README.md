@@ -26,6 +26,6 @@ you
 
 ### Code Documentation
 This documentation contains call graphs, class hirarchy, class index and much more.
-The documenation is located at Notebank\src\main\resources\documentation\index.html
+The documenation is located at Notebank\src\main\resources\documentation\index.html and should be opened in the browser
 ![image](https://user-images.githubusercontent.com/12773434/160386317-bd6f3cd3-9175-43f8-b6e9-22e48958246a.png)
 

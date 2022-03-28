@@ -12,11 +12,12 @@ import javax.swing.text.DateFormatter;
 
 /**
  *
- * I have a class (lib) of methods that performs actions that I will be using multiple times
- * 
+ * I have a class (lib) of methods that performs actions that I will be using
+ * multiple times
+ *
  * @author Uche Powers
  */
-public class NoteUtils{
+public class NoteUtils {
 
     public static boolean isNumeric(String value) {
         return notEmpty(value) && value.matches("[0-9]+");
@@ -197,7 +198,7 @@ public class NoteUtils{
         return str.concat("000000");
     }
 
-    public static Predicate getPredicates(Integer id, Integer userId, String searchText, String tags, String visibility,
+    public static Predicate getPredicates(Integer id, Integer userId, String title, String body, String tag, String visibility,
             Integer page, Integer size, String orderColumn, String orderDirection,
             Root<Notes> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
 
@@ -211,16 +212,14 @@ public class NoteUtils{
         if (NoteUtils.notNull(visibility)) {
             predicates.add(criteriaBuilder.equal(root.get("visibility"), visibility));
         }
-        if (NoteUtils.notEmpty(tags)) {
-            predicates.add(criteriaBuilder.like(root.get("tags"), tags));
+        if (NoteUtils.notEmpty(tag)) {
+            predicates.add(criteriaBuilder.like(root.get("tag"), "%" + tag + "%"));
         }
-        if (NoteUtils.notEmpty(searchText)) {
-            predicates.add(criteriaBuilder.like(root.get("title"), "%" + searchText + "%"));
-            predicates.add(criteriaBuilder.like(root.get("body"), "%" + searchText + "%"));
+        if (NoteUtils.notEmpty(title)) {
+            predicates.add(criteriaBuilder.like(root.get("title"), "%" + title + "%"));
         }
-
-        if (NoteUtils.notEmpty(searchText)) {
-
+        if (NoteUtils.notEmpty(body)) {
+            predicates.add(criteriaBuilder.like(root.get("body"), "%" + body + "%"));
         }
 
         Predicate predicate = criteriaBuilder.and(predicates.toArray(new Predicate[0]));

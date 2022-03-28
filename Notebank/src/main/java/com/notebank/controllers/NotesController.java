@@ -19,7 +19,7 @@ public class NotesController {
 
     @Autowired
     private NotesService notesService;
-    
+
     //The user service is used within the code to authenticate a user's accesstoken
     @Autowired
     private UsersService usersService;
@@ -80,14 +80,14 @@ public class NotesController {
 
     }
 
-   
     //GET method to filter notes
     //this method contains query parameters to optionally filter notes
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> fetchNotes(
             @RequestHeader(value = "accessToken", required = false) String accessToken,
             @RequestParam(required = false) Integer id,
-            @RequestParam(required = false) String searchText,
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false) String body,
             @RequestParam(required = false) String tags,
             @RequestParam(required = false) String visibility,
             @RequestParam(defaultValue = "0") Integer page,
@@ -97,7 +97,7 @@ public class NotesController {
 
         Integer userId = usersService.validateUser(accessToken);
 
-        return notesService.fetchNotes(id, userId, searchText, tags, visibility, page, size, orderColumn, orderDirection);
+        return notesService.fetchNotes(id, userId, title, body, tags, visibility, page, size, orderColumn, orderDirection);
 
     }
 

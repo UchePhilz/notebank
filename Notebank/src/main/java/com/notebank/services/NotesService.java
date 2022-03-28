@@ -33,6 +33,7 @@ import org.springframework.stereotype.Service;
  * The NotesService class will contain all business logic for the note module
  *
  * Methods that returns ResponseEntity<?> will be used to satisfy http requests
+ *
  * @author Uche Powers
  */
 @Service
@@ -95,7 +96,7 @@ public class NotesService {
 
                 Notes note = findById.get();
                 Notes returnNotes = notesDto.returnNotes();
-                
+
                 //retain old note details before the update occurs
                 returnNotes.setId(note.getId());
                 returnNotes.setUserId(note.getUserId());
@@ -159,7 +160,7 @@ public class NotesService {
         return httpResponse;
     }
 
-    public ResponseEntity<?> fetchNotes(Integer id, Integer userId, String searchText, String tags, String visibility,
+    public ResponseEntity<?> fetchNotes(Integer id, Integer userId, String title, String body, String tags, String visibility,
             Integer page, Integer size, String orderColumn, String orderDirection) {
 
         ResponseEntity<?> httpResponse = null;
@@ -171,7 +172,7 @@ public class NotesService {
         Specification<Notes> specification = new Specification<Notes>() {
             @Override
             public Predicate toPredicate(Root<Notes> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
-                return NoteUtils.getPredicates(id, userId, searchText, tags, visibility,
+                return NoteUtils.getPredicates(id, userId, title, body, tags, visibility,
                         page, size, orderColumn, orderDirection, root, query, criteriaBuilder);
             }
         };
@@ -183,7 +184,6 @@ public class NotesService {
         return httpResponse;
     }
 
-    
     private ResponseEntity<?> httpResponseNoteIfPresent(Optional<Notes> notes) {
         ResponseEntity<?> httpResponse;
         if (notes.isPresent()) {
